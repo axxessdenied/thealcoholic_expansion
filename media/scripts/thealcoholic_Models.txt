@@ -1,10 +1,8 @@
-module TheAlcoholic
-{
-    import {
+module TheAlcoholic {
+    imports {
         Base
     }
 
-    /* HOOCH BOTTLE */
     model HoochBottle
 	{
 		mesh = WhiskeyBottle,

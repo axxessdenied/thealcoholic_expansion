@@ -1,11 +1,9 @@
-module AlcoholicRecipes
-{
+module TheAlcoholic {
 	imports {
 		Base
 	}
 
-	recipe Make Homebrew Beer
-	{
+	recipe Make Homebrew Beer {
 		BeerEmpty,
 		Sugar,
 		Yeast,

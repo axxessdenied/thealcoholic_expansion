@@ -1,11 +1,10 @@
-module TheAlcoholic
-{
+
+module TheAlcoholic {
 	imports {
 		Base
 	}
 
-	item HoochEmpty
-	{
+	item HoochEmpty {
 	    DisplayCategory = WaterContainer,
 		Weight	=	0.3,
 		CanStoreWater	=	TRUE,
@@ -19,9 +18,7 @@ module TheAlcoholic
 		ReplaceTypes = PetrolSource HoochPetrol;WaterSource HoochWaterFull,
 	}
 
-	
-	item HoochFull
-	{
+	item HoochFull {
 	    DisplayCategory = Food,
 		HungerChange	=	-20,
 		Weight	=	0.7,
@@ -30,25 +27,26 @@ module TheAlcoholic
 		ThirstChange	=	-20,
 		DisplayName	=	Hooch Bottle,
 		Alcoholic	=	TRUE,
-        UnhappyChange	=	-10,
+        UnhappyChange	=	20,
 		ReplaceOnUse	=	HoochEmpty,
 		Icon	=	AlcoholicBeerBottle,
 		CustomContextMenu = Drink,
 		CustomEatSound = DrinkingFromBottleGlass,
-		AlcoholPower = 2,
+		AlcoholPower = 3,
         Carbohydrates = 0,
         Proteins = 0,
         Lipids = 0,
-        Calories = 1500,
+        Calories = 1800,
         Packaged = TRUE,
         CantBeFrozen = TRUE,
         StaticModel = HoochBottle,
+		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4
         EatType = Bourbon,
         WorldStaticModel = HoochBottleGround,
+		Tags = Liquor,
 	}
 
-	item HoochWaterFull
-	{
+	item HoochWaterFull {
 		DisplayName = Water Bottle,
 		DisplayCategory = Water,
 		Type = Drainable,
@@ -69,8 +67,7 @@ module TheAlcoholic
 		WorldStaticModel = HoochBottleGround,
 	}
 
-	item HoochPetrol
-	{
+	item HoochPetrol {
 		DisplayCategory = VehicleMaintenance,
 		Weight	=	0.7,
 		Type	=	Drainable,
