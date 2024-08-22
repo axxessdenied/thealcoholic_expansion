@@ -1,23 +1,13 @@
-function addAlcoholicItems(player)		    
-    local inv = player:getInventory();  -- Java: access player inv	
-    
-    -- Java: add the actual items to the inventory	
-    inv:AddItem("Base.HoochFull");	
-    inv:AddItem("Base.BeerEmpty");
+-- (c) 2024 axxessdenied [Nick]
+
+local function addAlcoholicItems(playernum, character)
+    local player = getSpecificPlayer(playernum)
+    local x = ZombRandFloat(0.1, 0.9)
+    local y = ZombRandFloat(0.1, 0.9)
+    local z = player:getZ() - math.floor(player:getZ())
+    player:getInventory():AddItem("TheAlcoholic.HoochFull")
+    --player:getCurrentSquare():AddWorldInventoryItem("TheAlcoholic.HoochFull", x, y, z)
+    --triggerEvent("OnContainerUpdate")
 end
 
-function debugtestitems(_keyPressed)
-    local key = _keyPressed
-    print("Pressed key # : "..key)
-    if key == 25
-    then
-        local player = getSpecificPlayer(0)		    
-        local inv = player:getInventory()  -- Java: access player inv	
-        
-        -- Java: add the actual items to the inventory	
-        inv:AddItem("Base.HoochFull")
-        inv:AddItem("Base.BeerEmpty")
-    end
-end
-
-Events.OnKeyPressed.Add(debugtestitems)
+--Events.OnCreatePlayer.Add(addAlcoholicItems)

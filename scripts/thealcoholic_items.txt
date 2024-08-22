@@ -1,0 +1,86 @@
+module TheAlcoholic
+{
+	imports {
+		Base
+	}
+
+	item HoochEmpty
+	{
+	    DisplayCategory = WaterContainer,
+		Weight	=	0.3,
+		CanStoreWater	=	TRUE,
+		Type	=	Normal,
+		DisplayName	=	Empty Bottle,
+		ReplaceOnUseOn	=	WaterSource-HoochWaterFull,
+		Icon	=	WhiskeyEmpty,
+		StaticModel = HoochBottle,
+		WorldStaticModel = HoochBottleGround,
+		Tags = EmptyPetrol,
+		ReplaceTypes = PetrolSource HoochPetrol;WaterSource HoochWaterFull,
+	}
+
+	
+	item HoochFull
+	{
+	    DisplayCategory = Food,
+		HungerChange	=	-20,
+		Weight	=	0.7,
+		AlwaysWelcomeGift = TRUE,
+		Type	=	Food,
+		ThirstChange	=	-20,
+		DisplayName	=	Hooch Bottle,
+		Alcoholic	=	TRUE,
+        UnhappyChange	=	-10,
+		ReplaceOnUse	=	HoochEmpty,
+		Icon	=	AlcoholicBeerBottle,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottleGlass,
+		AlcoholPower = 2,
+        Carbohydrates = 0,
+        Proteins = 0,
+        Lipids = 0,
+        Calories = 1500,
+        Packaged = TRUE,
+        CantBeFrozen = TRUE,
+        StaticModel = HoochBottle,
+        EatType = Bourbon,
+        WorldStaticModel = HoochBottleGround,
+	}
+
+	item HoochWaterFull
+	{
+		DisplayName = Water Bottle,
+		DisplayCategory = Water,
+		Type = Drainable,
+		Weight = 0.7,
+		Icon = Whiskey_Water_Full,
+		CanStoreWater = TRUE,
+		EatType = Bourbon,
+		FillFromDispenserSound = GetWaterFromDispenserGlass,
+		FillFromTapSound = GetWaterFromTapGlass,
+		IsCookable = TRUE,
+		IsWaterSource = TRUE,
+		ReplaceOnDeplete = HoochEmpty,
+		ReplaceOnUseOn = WaterSource-HoochWaterFull,
+		UseDelta = 0.08,
+		UseWhileEquipped = FALSE,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = HoochBottle,
+		WorldStaticModel = HoochBottleGround,
+	}
+
+	item HoochPetrol
+	{
+		DisplayCategory = VehicleMaintenance,
+		Weight	=	0.7,
+		Type	=	Drainable,
+		UseWhileEquipped	=	FALSE,
+		UseDelta	=	1,
+		DisplayName	=	Bottle of Gasoline,
+		Icon	=	WhiskeyBottleGas,
+		ReplaceOnDeplete	=	HoochEmpty,
+		StaticModel = HoochBottleGasoline,
+		WorldStaticModel = HoochBottleGroundGasoline,
+		Tags = Petrol,
+	}
+}

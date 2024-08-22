@@ -1,0 +1,43 @@
+module TheAlcoholic
+{
+    import {
+        Base
+    }
+
+    /* HOOCH BOTTLE */
+    model HoochBottle
+	{
+		mesh = WhiskeyBottle,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 180.0000 27.0000 -89.0000,
+		}
+	}
+	model HoochBottleGasoline
+	{
+		mesh = WhiskeyBottle,
+		texture = WhiskeyGasoline,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 180.0000 27.0000 -89.0000,
+		}
+	}
+
+    model HoochBottleGround
+    {
+        mesh = WorldItems/WhiskeyBottle,
+        texture = WhiskeyBottle,
+        scale = 0.4,
+    }
+	model HoochBottleGroundGasoline
+    {
+        mesh = WorldItems/WhiskeyBottle,
+        texture = WhiskeyGasoline,
+        scale = 0.4,
+    }
+
+}
