@@ -1,0 +1,6 @@
+name=The Alcoholic [ EXPANSION ]
+poster=poster.png
+icon=icon.png
+id=thealcoholic_expansion
+description=It's the end of the world, might as well be drunk!
+require=thealcoholic

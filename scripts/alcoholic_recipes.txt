@@ -1,0 +1,19 @@
+module AlcoholicRecipes
+{
+	imports {
+		Base
+	}
+
+	recipe Make Homebrew Beer
+	{
+		BeerEmpty,
+		Sugar,
+		Yeast,
+        Water=1,
+        
+		Result:BeerBottle,
+		Time:100.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	}
+}
