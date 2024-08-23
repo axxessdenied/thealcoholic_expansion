@@ -4,13 +4,27 @@ module TheAlcoholic {
 	}
 
 	recipe Make Homebrew Beer {
-		BeerEmpty,
-		Sugar,
-		Yeast,
+		BeerEmpty=1,
+		Sugar=0.25,
+		Yeast=0.25,
         Water=1,
         
-		Result:BeerBottle,
+		Result:HomebrewBeerBottle,
 		Time:100.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	}
+
+	recipe Make Hooch {
+		HoochEmpty/WhiskeyEmpty/WineEmpty/WineEmpty2=1,
+		Sugar=1,
+		JuiceBox=2,
+		Apple/Banana/BerryBlack/BerryBlue/BerryGeneric1/BerryGeneric2/BerryGeneric3/BerryGeneric4/BerryGeneric5/BeautyBerry/WinterBerry/HollyBerry/Cherry/GrapeFruit/Grapes/Lemon/Lime/Mango/Orange/Peach/Pear/Pineapple/Watermelon/Watermelon/WatermelonSmashed/WatermelonSliced=8,
+		Ketchup=0.25,
+		Water=1,
+
+		Result:HoochFull
+		Time:300.0,
 		Category:Cooking,
 		OnGiveXP:Recipe.OnGiveXP.Cooking10,
 	}

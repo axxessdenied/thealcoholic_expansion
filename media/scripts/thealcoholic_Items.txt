@@ -4,6 +4,34 @@ module TheAlcoholic {
 		Base
 	}
 
+	item HomebrewBeerBottle
+	{
+		DisplayName = Homebrew Beer Bottle,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.3,
+		Icon = BeerBottle,
+		EvolvedRecipe = Soup:9;Stew:9;Beer:9;Beer2:9,
+		FoodType = Beer,
+		Alcoholic = TRUE,
+		CantBeFrozen = TRUE,
+		Packaged = TRUE,
+		ReplaceOnUse = BeerEmpty,
+		HungerChange = -5,
+		ThirstChange = -10,
+		UnhappyChange = -10,
+		Calories = 100,
+		Carbohydrates = 30,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = BeerBottle,
+		WorldStaticModel = BeerBottle,
+		Tags = LowAlcohol,
+		EvolvedRecipeName = Beer,
+	}
+
 	item HoochEmpty {
 	    DisplayCategory = WaterContainer,
 		Weight	=	0.3,
