@@ -1,0 +1,8 @@
+
+IGUI_EN = {
+	IGUI_perks_Libations 			    = "Libations Mastery",
+	IGUI_perks_Distilling 			    = "Distilling",
+	IGUI_CraftCategory_TheAlcoholic 	= "TheAlcoholic",
+	IGUI_ItemCat_TheAlcoholic 			= "TheAlcoholic",
+	IGUI_ItemCat_CraftDistilling 	    = "Crafting - Distilling",
+}

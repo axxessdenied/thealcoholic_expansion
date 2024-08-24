@@ -14,6 +14,7 @@ module TheAlcoholic {
 		EvolvedRecipe = Soup:9;Stew:9;Beer:9;Beer2:9,
 		FoodType = Beer,
 		Alcoholic = TRUE,
+		AlcoholPower = 1,
 		CantBeFrozen = TRUE,
 		Packaged = TRUE,
 		ReplaceOnUse = BeerEmpty,
@@ -46,34 +47,35 @@ module TheAlcoholic {
 		ReplaceTypes = PetrolSource HoochPetrol;WaterSource HoochWaterFull,
 	}
 
-	item HoochFull {
-	    DisplayCategory = Food,
-		HungerChange	=	-20,
-		Weight	=	0.7,
-		AlwaysWelcomeGift = TRUE,
-		Type	=	Food,
-		ThirstChange	=	-20,
-		DisplayName	=	Hooch Bottle,
-		Alcoholic	=	TRUE,
-        UnhappyChange	=	20,
-		ReplaceOnUse	=	HoochEmpty,
-		Icon	=	AlcoholicBeerBottle,
+    item HoochFull
+	{
+		DisplayName = Hooch Bottle,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 1,
+		Icon = WhiskeyFull,
+		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4, /*;Soup:4;Stew:4,*/
+		FoodType = Liquor,
+		AlcoholPower = 4,
+		Alcoholic = TRUE,
+		CantBeFrozen = TRUE,
+		EatType = Bourbon,
+		Packaged = TRUE,
+		ReplaceOnUse = HoochEmpty,
+		HungerChange = -15,
+		ThirstChange = -15,
+		UnhappyChange = -5,
+		Calories = 1800,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 0,
 		CustomContextMenu = Drink,
 		CustomEatSound = DrinkingFromBottleGlass,
-		AlcoholPower = 3,
-        Carbohydrates = 0,
-        Proteins = 0,
-        Lipids = 0,
-        Calories = 1800,
-        Packaged = TRUE,
-        CantBeFrozen = TRUE,
-        StaticModel = HoochBottle,
-		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4
-        EatType = Bourbon,
-        WorldStaticModel = HoochBottleGround,
+		StaticModel = HoochBottle,
+		WorldStaticModel = HoochBottleGround,
 		Tags = Liquor,
 	}
-
+	
 	item HoochWaterFull {
 		DisplayName = Water Bottle,
 		DisplayCategory = Water,

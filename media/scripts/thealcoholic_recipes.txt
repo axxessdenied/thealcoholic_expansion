@@ -9,10 +9,14 @@ module TheAlcoholic {
 		Yeast=0.25,
         Water=1,
         
-		Result:HomebrewBeerBottle,
-		Time:100.0,
-		Category:Cooking,
-		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		CanCraftFromFloor	:	True,
+		Result				:	HomebrewBeerBottle,
+		Time				:	125.0,
+		Category			:	TheAlcoholic,
+		NeedToLearn			:	true,
+		SkillRequired		:	Distilling=1,
+		OnTest				:	Recipe.OnTest.NotTaintedWater,
+		OnGiveXP			:	Recipe.OnGiveXP.Distilling10,
 	}
 
 	recipe Make Hooch {
@@ -23,9 +27,13 @@ module TheAlcoholic {
 		Ketchup=0.25,
 		Water=1,
 
-		Result:HoochFull
-		Time:300.0,
-		Category:Cooking,
-		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		CanCraftFromFloor	:	True,
+		Result				:	HoochFull
+		Time				:	300.0,
+		Category			:	TheAlcoholic,
+		NeedToLearn			:	true,
+		SkillRequired		:	Distilling=2,
+		OnTest				:	Recipe.OnTest.NotTaintedWater,
+		OnGiveXP			:	Recipe.OnGiveXP.Distilling25,
 	}
 }

@@ -1,0 +1,4 @@
+UI_EN = {
+    UI_trait_Distiller = "Distiller",
+    UI_trait_DistillerDesc = "You have become the liquor. +2 Distilling",
+}
